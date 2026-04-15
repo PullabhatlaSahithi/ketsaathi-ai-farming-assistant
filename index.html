@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ketsaathi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .scroll-images {
+            display: inline-block;
+            animation: scroll-left 25s linear infinite;
+        }
+
+        .scroll-images img {
+            height: 120px;
+            margin: 0 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .scroll-container {
+            width: 100%;
+            overflow: hidden;
+            background: #f0f4f0;
+            white-space: nowrap;
+        }
+
+        .scroll-track {
+            display: inline-block;
+            animation: scroll-left 25s linear infinite;
+        }
+
+        .scroll-track img {
+            height: 100px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1rem;
+        }
+
+        .language-switcher select {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo-title">
+                <img src="https://i.ibb.co/97bd2Rs/1000341370.jpg" alt="Logo" class="logo">
+                <div>
+                    <h1 data-i18n-key="appTitle">కేత్సాతి</h1>
+                    <p class="tagline" data-i18n-key="tagline">మట్టి నుండి మార్కెట్కు దశల వారీ మార్గదర్శకత్వం</p>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="#home" data-i18n-key="home">హోం</a>
+                <a href="#features" data-i18n-key="features">ఫీచర్లు</a>
+                <a href="#contact" data-i18n-key="contact">సంప్రదించండి</a>
+            </nav>
+            <div class="language-switcher">
+                <select id="languageSelector" onchange="setLanguage(this.value)">
+                    <option value="te">తెలుగు</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div id="home" class="ai-search-top">
+        <h2 data-i18n-key="aiAssistantTitle">🤖ఏఐ స్మార్ట్ ఫార్మింగ్ అసిస్టెంట్</h2>
+    </div>
+    <div class="scroll-container">
+        <div class="scroll-images">
+            <a href="https://ibb.co/gMDT6wNs"><img src="https://i.ibb.co/DD7CLkh3/1725892426191.jpg"
+                    alt="1725892426191" border="0"></a>
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/r2Jg4zJ8/images.jpg" alt="images" border="0"></a>
+            <a href="https://ibb.co/MyB76dwS"><img src="https://i.ibb.co/zW6ZJd9x/download.webp" alt="download"
+                    border="0"></a>
+            <a href="https://ibb.co/Lh1DzbsP"><img src="https://i.ibb.co/M57yDWJh/15381858474-0a1b4ffc2d-c.jpg"
+                    alt="15381858474-0a1b4ffc2d-c" border="0"></a>
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/hFmrnvWd/Bayer-5-11-2018-website-format.jpg"
+                    alt="Bayer-5-11-2018-website-format" border="0"></a>
+            <a href="https://ibb.co/vx79dbFd"><img src="https://i.ibb.co/GvKmMX6M/farmer-5702664-1280.jpg"
+                    alt="farmer-5702664-1280" border="0"></a>
+            <img src="https://i.ibb.co/DD7CLkh3/1725892426191.jpg" alt="Farmer checking soil">
+            <img src="https://i.ibb.co/r2Jg4zJ8/images.jpg" alt="Wheat crops in field">
+            <img src="https://i.ibb.co/zW6ZJd9x/download.webp" alt="Paddy field">
+            <img src="https://i.ibb.co/M57yDWJh/15381858474-0a1b4ffc2d-c.jpg" alt="Farm irrigation system">
+            <img src="https://i.ibb.co/hFmrnvWd/Bayer-5-11-2018-website-format.jpg" alt="Crop care illustration">
+            <img src="https://i.ibb.co/GvKmMX6M/farmer-5702664-1280.jpg" alt="Happy farmer harvesting">
+        </div>
+    </div>
+
+        <section id="home" class="home-section">
+               
+            <div class="home-content">
+                <h1 data-i18n-key="welcome">🌾 కేత్సాతికి స్వాగతం</h1>
+                <p data-i18n-key="welcomeText">మీ AI-ఆధారిత దశల వారీ వ్యవసాయ మార్గదర్శి-మట్టి తయారీ నుండి మార్కెట్ అమ్మకం వరకు.</p>
+                <a href="#features" class="cta-btn" data-i18n-key="getStarted">🚀ప్రారంభించండి</a>
+            </div>
+
+            <div class="about-home">
+                <h2 data-i18n-key="aboutUsTitle"></h2>
+                <p data-i18n-key="aboutUsText">కేత్సాతి అనేది AI-ఆధారిత అంతర్దృష్టులతో రైతులకు సాధికారత కల్పించడానికి రూపొందించబడింది.
+                    మట్టి ఆరోగ్యాన్ని పర్యవేక్షించడం మరియు సరైన పంటలను ఎంచుకోవడం నుండి మార్కెట్లలో పంటకోత మరియు అమ్మకం వరకు,
+                    వ్యవసాయం యొక్క ప్రతి దశలో నిజ-సమయ హెచ్చరికలు మరియు సిఫార్సులతో మేము మీకు మార్గనిర్దేశం చేస్తాము.
+                </p>
+            </div>
+
+            <div class="home-features">
+                <div class="feature-card">
+                    <h3 data-i18n-key="feature1Title">🤖ఏఐ అసిస్టెంట్</h3>
+                    <p data-i18n-key="feature1Text">పంటలు, తెగుళ్ళు లేదా మట్టి గురించి ఏదైనా అడగండి-మీ పొలానికి అనుగుణంగా
+                        తక్షణ తెలివైన సమాధానాలను పొందండి.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n-key="feature2Title">📡స్మార్ట్ మానిటరింగ్ </h3>
+                    <p data-i18n-key="feature2Text">రియల్ టైమ్ డేటా మరియు హెచ్చరికలతో మట్టి, వాతావరణం మరియు పంట
+                        పెరుగుదలను ట్రాక్ చేయండి.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n-key="feature3Title">📊 మార్కెట్ అవగాహన</h3>
+                    <p data-i18n-key="feature3Text">మండి ధరలు, డిమాండ్ పోకడలు మరియు ప్రభుత్వ పథకాలతో మార్కెట్ అంతర్దృష్టి
+                        నవీకరించబడింది.</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="features" class="step">
+            <button onclick="toggleStep(1)" data-i18n-key="step1Title">
+                దశ 1: మట్టి పర్యవేక్షణ</button>
+            <div class="content" id="step1">
+                <p data-i18n-key="step1Text1">✅ శాటిలైట్ మరియు సెన్సార్లను ఉపయోగించి మట్టి సంతానోత్పత్తి, తేమ మరియు
+                    పిహెచ్ స్థాయిని తనిఖీ చేయండి.</p>
+                <p data-i18n-key="step1Text2">⚠️ ముందుజాగ్రత్తలుః అతిగా నీరు పెట్టడం మానుకోండి, నాటడానికి ముందు మట్టిని
+                    పరీక్షించండి.</p>
+                <canvas id="soilChart"></canvas>
+            </div>
+        </div>
+
+        <div class="step">
+            <button onclick="toggleStep(2)" data-i18n-key="step2Title">దశ 2: పంట ఎంపిక</button>
+            <div class="content" id="step2">
+                <p data-i18n-key="step2Text1">🌱 మట్టి మరియు సీజన్ ఆధారంగా, AI తగిన పంటలను సూచిస్తుంది.</p>
+                <p data-i18n-key="step2Text2">✅ ఉదాహరణకుః శీతాకాలంలో గోధుమలు, వర్షాకాలంలో వరి.</p>
+                <canvas id="cropChart"></canvas>
+            </div>
+        </div>
+
+        <div class="step">
+            <button onclick="toggleStep(3)" data-i18n-key="step3Title">దశ 3: నాటడం మార్గదర్శకం</button>
+            <div class="content" id="step3">
+                <p data-i18n-key="step3Text1">🪴విత్తనాల అంతరం, నీటి కేటాయింపు షెడ్యూల్, ఎరువుల కోసం దశల వారీ మార్గదర్శిని.</p>
+                <h4 data-i18n-key="step3Text2">⚠️ ముందు జాగ్రత్తలుః</h4>
+                <ul>
+                    <li data-i18n-key="step3List1">ముందు జాగ్రత్తలు: ధృవీకరించబడిన విత్తనాలను మాత్రమే ఉపయోగించండి.</li>
+                    <li data-i18n-key="step3List2">ప్రారంభ దశల్లో అధిక ఫలదీకరణం మానుకోండి.</li>
+                    <li data-i18n-key="step3List3">చాలా లోతుగా నాటవద్దు; సిఫార్సు చేయబడిన లోతును నిర్వహించండి.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <button onclick="toggleStep(4)" data-i18n-key="step4Title">దశ 4: వృద్ధి పర్యవేక్షణ మరియు సమస్య హెచ్చరికలు</button>
+            <div class="content" id="step4">
+                <p data-i18n-key="step4Text1">📡 AI పంట పెరుగుదల, తెగుళ్ళు మరియు వ్యాధులను గుర్తిస్తుంది.</p>
+                <p data-i18n-key="step4Text2">✅హెచ్చరికలుః పోషక లోపం, తెగుళ్ళ దాడులు, వాతావరణ సమస్యలు.</p>
+                <canvas id="growthChart"></canvas>
+            </div>
+        </div>
+
+        <div class="step">
+            <button onclick="toggleStep(5)" data-i18n-key="step5Title">దశ 5: పంటకోత</button>
+            <div class="content" id="step5">
+                <p data-i18n-key="step5Text1">🌾వాతావరణం మరియు పరిపక్వత ఆధారంగా కోతకు ఉత్తమ సమయాన్ని AI సూచిస్తుంది.</p>
+                <p data-i18n-key="step5Text2">⚠️జాగ్రత్తః వర్షాకాలంలో పంట కోతకు దూరంగా ఉండండి.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <button onclick="toggleStep(6)" data-i18n-key="step6Title">దశ 6: అమ్మకం మరియు అమ్మకం</button>
+            <div class="content" id="step6">
+                <p data-i18n-key="step6Text1">📊ప్రస్తుత మార్కెట్ ధరలు, ప్రభుత్వ పథకాలు మరియు డిమాండ్ పోకడలను చూడండి.</p>
+                <p data-i18n-key="step6Text2">✅ రైతులకు ఉత్తమ సమయంలో విక్రయించడానికి సహాయపడుతుంది.</p>
+                <canvas id="marketChart"></canvas>
+            </div>
+        </div>
+      <!-- Steps end here -->
+<div class="step">
+  <!-- last step content -->
+</div>
+
+<!-- Footer / Contact info at the very bottom -->
+<section id="contact">
+  <!-- Telugu -->
+  <div id="contact-te" class="contact-block">
+     <p> టీమ్ ఉజ్వల్ </p>
+    <p>ఇమెయిల్: <a href="mailto:teamsih.25@gmail.com">teamsih.25@gmail.com</a></p>
+    <p>చిరునామా: విశాఖపట్నం, ఆంధ్రప్రదేశ్</p>
+    
+    
+  </div>
+
+  <!-- English -->
+  <div id="contact-en" class="contact-block">
+    <p>Email: <a href="mailto:teamsih.25@gmail.com">teamsih.25@gmail.com</a></p>
+    <p> BY TEAM Ujwal</p>
+    <p>Address: Visakhapatnam, Andhra Pradesh</p>
+  </div>
+
+  <!-- Hindi -->
+  <div id="contact-hi" class="contact-block">
+    <p>टीम उज्जवल द्वारा</p>
+    <p>ईमेल: <a href="mailto:teamsih.25@gmail.com">teamsih.25@gmail.com</a></p>
+    <p>पता: विशाखापत्तनम, आंध्र प्रदेश</p>
+  </div>
+</section>
+
+
+        <div id="chatbotIcon" class="chatbot-icon" onclick="toggleChatbot()">
+            🤖
+        </div>
+
+        <div id="chatbotWindow" class="chatbot-window hidden">
+            <div class="chat-header">
+                <span data-i18n-key="chatbotHeader">ఏఐ స్మార్ట్ అసిస్టెంట్</span>
+                <button onclick="toggleChatbot()">✖</button>
+            </div>
+            <div id="chatBox" class="chat-box"></div>
+            <div class="chat-controls">
+                <input type="text" id="textInput" data-i18n-placeholder="textInputPlaceholder"
+                    placeholder="Type your question...">
+                <button id="sendButton">➤</button>
+                <button id="micButton">🎤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  <!DOCTYPE html>
+<!-- Your other sections like Home, Features... -->
+
+<section id="contact">
+ 
+  
+</div>
+
+  
+
+
+<script>
+  const languageSelector = document.getElementById("languageSelector"); // top dropdown
+  const contactBlocks = document.querySelectorAll('.contact-block');
+
+  function updateContactInfo() {
+    const lang = languageSelector.value; // get selected language
+    contactBlocks.forEach(block => block.style.display = "none"); // hide all
+    const selectedBlock = document.getElementById("contact-" + lang);
+    if(selectedBlock) selectedBlock.style.display = "block"; // show selected
+  }
+
+  // Show initial language
+  updateContactInfo();
+
+  // Update contact info whenever top language changes
+  languageSelector.addEventListener("change", updateContactInfo);
+  
+</script>
+
+
+</body>
+</html>
+
+
+</html>
