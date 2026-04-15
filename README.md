@@ -18,7 +18,9 @@ Ketsaathi is a responsive web application designed to help farmers with step-by-
 https://your-username.github.io/ketsaathi-ai-farming-assistant
 
 ## 📸 Screenshots
-(Add screenshots here later)
+<img width="1894" height="880" alt="image" src="https://github.com/user-attachments/assets/edd2e6b9-d6f4-4faf-841d-6c308c38ad4b" />
+
+
 
 ## 📌 Future Improvements
 - Real AI integration
